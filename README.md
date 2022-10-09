@@ -2,7 +2,10 @@
 
 I started this project in the spirit of Hacktober of 2022, mainly because I have yet to find a suitable starter framework built using the latest stack with Nest.js and Next.js. These frameworks are great but there are still a lot of boilerplating you need to do when you are building your next project idea. 
 
-After several iterations of starting projects from scratch, I decided to put all the things I've learned and put it neatly into a single codebase. This is not a library, it just a collection of all the existing open-source tools that exist today. I hope you find this useful.
+Some other motivations behind this framework was to speed up Nest.js dev time using Vite. I found the time it takes to hot-reload after each code change painful as the code base grew. Thankfully Vite was able to resolve these issues and putting this available for everyone to use.
+
+After several iterations of starting projects from scratch, I decided to put all the things I've learned and put it neatly into a single codebase. This is not a library, it is a collection of all the existing open-source tools that exist today. I hope you find this useful.
+
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
