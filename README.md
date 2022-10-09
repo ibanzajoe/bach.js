@@ -1,4 +1,4 @@
-# Bach.js is a modern starter framework using TypeScript stack
+# Bach.js
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
