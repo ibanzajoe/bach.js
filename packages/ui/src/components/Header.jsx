@@ -118,8 +118,8 @@ export function Header() {
             <Button href="/login" variant="outline" className="hidden lg:block">
               Log in
             </Button>
-            <Button href="#" className="hidden lg:block">
-              Signup
+            <Button href="/register" className="hidden lg:block">
+              Try Free
             </Button>
           </div>
         </Container>
