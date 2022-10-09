@@ -14,11 +14,13 @@ After several iterations of starting projects from scratch, I decided to put all
 ## Features
 - Nest.js equipped with Vite for astonishgly faster Hot Module Replacement 🔥
 - Next.js + Tailwind UI theme for client and admin
+- Lerna with NX for faster builds and caching
 - TypeORM with better transactional support
 - Swagger documentation, [Joi](https://github.com/hapijs/joi) validation, Winston logger, ...
 - User auth and role-based access control
 - REST API w/ pagination 
 - Folder structure, code samples and best practices
+- CI/CD ready using GCP
 
 ## 1. Getting started
 
