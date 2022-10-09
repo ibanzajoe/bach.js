@@ -52,8 +52,11 @@ You are now ready to launch the NestJS backend using the command below.
 # Start Postgres database using Docker
 yarn db:start
 
-# Launch the development server
+# Launch the backend development server
 yarn api:start
+
+# Launch the frontend development server
+yarn ui:start
 ```
 
 You can now head to `http://localhost:3000` to verify that your API is up and running.
