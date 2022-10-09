@@ -14,7 +14,8 @@
 Before starting, make sure you have at least those components on your workstation:
 
 - Node v16+
-- Up-to-date Docker installation on your system
+- Yarn 1.22+
+- Up-to-date installation of Docker
   [Docker](https://www.docker.com/) may also be useful for advanced testing and image building, although it is not required for development.
 
 ### 1.2 Project configuration
