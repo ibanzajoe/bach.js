@@ -1,4 +1,6 @@
-# Bach.js is a modern starter framework
+# Bach.js is a modern starter framework using TypeScript stack
+
+“I play the notes as they are written, but it is God who makes the music.”, Bach
 
 <img src="https://d3fr1q02b1tb0i.cloudfront.net/wp-content/uploads/2017/11/06075602/Bach-bye-bye.jpg" width="300" />
 
