@@ -46,7 +46,7 @@ Last but not least, update the `JWT_SECRET` to sign the JWT tokens.
 
 ### 1.3 Launch and discover
 
-You are now ready to launch the NestJS backend using the command below.
+You are now ready to launch the Postgres database, NestJS backend, and Next.js frontend using the commands below.
 
 ```sh
 # Start Postgres database using Docker
