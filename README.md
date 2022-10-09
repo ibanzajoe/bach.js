@@ -1,4 +1,4 @@
-# Bach.js - A highly-performant stack using Nest and Next
+# Bach.js - an optimized full-stack framework
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
@@ -22,8 +22,7 @@ Before starting, make sure you have at least those components on your workstatio
 
 - Node v16+
 - Yarn 1.22+
-- Up-to-date installation of Docker
-  [Docker](https://www.docker.com/) may also be useful for advanced testing and image building, although it is not required for development.
+- Up-to-date installation of [Docker](https://www.docker.com/) may also be useful for advanced testing and image building, although it is not required for development.
 
 ### 1.2 Project configuration
 
