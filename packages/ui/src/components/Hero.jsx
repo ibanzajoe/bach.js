@@ -278,8 +278,8 @@ export function Hero() {
               Sample app
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              This app is built to demonstrate the power of Bach.js. Come test
-              and see how fast you can build your project.
+              This app is built using Bach.js. Come test and see how fast you
+              can build your next project.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
