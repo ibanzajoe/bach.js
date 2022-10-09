@@ -13,6 +13,11 @@
 - REST API w/ pagination 
 - Folder structure, code samples and best practices
 
+## Motives
+
+I started this project in the spirit of Hacktober of 2022, mainly because I have yet to find a suitable starter framework built using the latest stack with Nest.js and Next.js. These frameworks are great but there are still a lot of boilerplating you need to do when you are working on your next project idea. 
+
+After several iterations of starting projects from scratch, I decided to put all the things I've learned and put it neatly into a single codebase. This is not a library, it just a collection of all the existing open-source tools that exist today. I hope you find this useful.
 
 ## 1. Getting started
 
