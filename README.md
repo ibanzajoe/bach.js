@@ -1,10 +1,10 @@
-# Bach.js - Starter framework for Nest and Next
+# Bach.js - A highly-performant stack using Nest and Next
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
 <img src="https://d3fr1q02b1tb0i.cloudfront.net/wp-content/uploads/2017/11/06075602/Bach-bye-bye.jpg" width="300" />
 
-
+## Features
 - Nest.js equipped with Vite for astonishgly faster Hot Module Replacement 🔥
 - Next.js + Tailwind UI theme for client and admin
 - TypeORM with better transactional support
