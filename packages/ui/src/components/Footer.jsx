@@ -31,7 +31,7 @@ export function Footer() {
               <div className="ml-4">
                 <p className="text-base font-semibold">Bach.js</p>
                 <p className="mt-1 text-sm">
-                  "Where others see code, I see music." - J.S. Bach
+                  &quot;Where others see code, I see music.&quot; - J.S. Bach
                 </p>
               </div>
             </div>
