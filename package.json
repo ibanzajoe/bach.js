@@ -1,0 +1,19 @@
+{
+  "name": "bach.js",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.6.1"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "api:start": "lerna run dev --scope=api",
+    "ui:start": "lerna run dev --scope=ui",
+    "db:start": "docker-compose up"
+  }
+}

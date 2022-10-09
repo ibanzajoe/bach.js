@@ -1,0 +1,19 @@
+{
+  "folders": [
+    { "path": ".", "name": ".workspace" },
+    { "path": "packages/api" },
+    { "path": "packages/ui" }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "files.exclude": {
+      "packages": true
+    },
+    "editor.formatOnSave": true,
+    "search.exclude": {
+      "**/dist": true
+    },
+    "barrelr.excludeFileRegex": "(\\.spec\\.|\\.test\\.|\\.e2e\\.|\\.stories\\.)"
+  }
+}
