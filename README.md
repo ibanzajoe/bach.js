@@ -1,4 +1,4 @@
-# Bach.js - A highly-performant stack using Nest and Next
+# Bach.js - an optimized full-stack framework using Nest and Next
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
