@@ -5,7 +5,9 @@
 - TypeORM with better transactional support
 - Swagger documentation, [Joi](https://github.com/hapijs/joi) validation, Winston logger, ...
 - User auth and role-based access control
+- REST API w/ pagination 
 - Folder structure, code samples and best practices
+
 
 ## 1. Getting started
 
