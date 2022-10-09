@@ -1,6 +1,6 @@
 # Bach.js is a modern starter framework
 
-![Bach](https://d3fr1q02b1tb0i.cloudfront.net/wp-content/uploads/2017/11/06075602/Bach-bye-bye.jpg)
+![Bach](https://d3fr1q02b1tb0i.cloudfront.net/wp-content/uploads/2017/11/06075602/Bach-bye-bye.jpg | width=300)
 
 
 - Nest.js equipped with Vite for astonishgly faster Hot Module Replacement 🔥
