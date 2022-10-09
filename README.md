@@ -1,4 +1,4 @@
-# Bach.js
+# Bach.js - Starter framework for Nest and Next
 
 “Ceaseless work...that is my secret.” - J.S. Bach
 
