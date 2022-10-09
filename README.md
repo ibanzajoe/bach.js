@@ -83,10 +83,10 @@ The CLI commands below are already included with this template and can be used t
 ```sh
 
 # Start the Nest.js backend API w/ faster hot-reloads
-yarn start:api
+yarn api:start
 
 # Run the UI app using Next.js
-yarn start:ui
+yarn ui:start
 
 # Create a new migration named MyMigration
 yarn db:migration:create [MyMigration]
