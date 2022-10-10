@@ -10,6 +10,7 @@ export default defineConfig({
       adapter: 'nest',
       appPath: './src/main.ts',
       tsCompiler: 'swc',
+      exportName: 'app',
     }),
   ] as unknown as [PluginOption],
   optimizeDeps: {
@@ -22,6 +23,7 @@ export default defineConfig({
       'class-transformer',
       'class-validator',
       'fastify-swagger',
+      'mock-aws-s3',
     ],
   },
 });
