@@ -73,7 +73,7 @@ yarn api:start
 yarn ui:start
 ```
 
-You can now head to `http://localhost:3000` to verify that your API is up and running.
+You can now head to `http://localhost:3000` for backend as well as `http://localhost:3001` for frontend to verify they are up and running.
 
 ## 2. Project structure
 
