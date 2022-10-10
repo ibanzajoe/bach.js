@@ -15,6 +15,7 @@ import {
   UserRegisterDto,
 } from './user.dto';
 import { User } from './user.entity';
+import { MailService } from '../mail/mail.service';
 
 @Injectable()
 export class UserService {
@@ -23,6 +24,7 @@ export class UserService {
     protected readonly userRepository: Repository<User>,
     private readonly configService: ConfigService,
     private readonly jwtService: JwtService,
+    private readonly mailService: MailService,
   ) {}
 
   async register(dto: UserRegisterDto) {
@@ -32,9 +34,15 @@ export class UserService {
     }
     try {
       // create user
-      return await this.userRepository.save(user);
+      const newUser = await this.userRepository.save(user);
+
+      // send register email
+      const res = await this.mailService.sendUserRegistrationEmail(newUser);
+      console.log('res', res);
+
+      return newUser;
     } catch (error) {
-      if (error.constraint === 'user__email__uq') {
+      if (error.message.includes('duplicate key value')) {
         throw new ConflictException(
           'Duplicate email. Please try a different email address.',
         );
@@ -44,8 +52,9 @@ export class UserService {
   }
 
   async encryptPassword(password: string) {
-    const rounds = await this.configService.get('BCRYPT_SALT_ROUNDS');
+    const rounds = await this.configService.get('USER_BCRYPT_ROUNDS');
     let hashed;
+
     // tslint:disable-next-line
     if (password.indexOf('$2a$') === 0 && password.length === 60) {
       // assume already a hash, maybe copied from another record
@@ -82,10 +91,11 @@ export class UserService {
         );
       }
 
-      // update timestamp when last logged in
+      // update timestamp when user last authenticated
       user.authenticated = new Date();
       await this.userRepository.save(user);
 
+      // JWT payload
       const payload = {
         sub: user.id,
         email: user.email,
@@ -121,5 +131,15 @@ export class UserService {
   async update(dto: Partial<User>, requestUser: User) {
     await this.userRepository.update(dto.id, dto);
     return await this.userRepository.findOne({ where: { id: dto.id } });
+  }
+
+  async verifyEmail(token: string) {
+    const userId = +token;
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+    if (user) {
+      user.verified = new Date();
+      await this.userRepository.save(user);
+      return true;
+    }
   }
 }

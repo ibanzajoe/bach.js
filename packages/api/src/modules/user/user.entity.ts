@@ -4,7 +4,9 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
+  Unique,
   UpdateDateColumn,
 } from 'typeorm';
 
@@ -17,6 +19,7 @@ export class User {
   public id: number;
 
   @ApiProperty()
+  @Index({ unique: true })
   @Column('citext', { nullable: false })
   public email: string;
 

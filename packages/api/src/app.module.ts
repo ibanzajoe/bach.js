@@ -5,10 +5,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './modules/config/config.module';
 import { ConfigService } from './modules/config/config.service';
+import { MailModule } from './modules/mail/mail.module';
 import { UserModule } from './modules/user/user.module';
 
 @Module({
   imports: [
+    MailModule,
     ConfigModule.register({
       environment: process.env.NODE_ENV || 'development',
       isGlobal: true,
@@ -30,6 +32,7 @@ import { UserModule } from './modules/user/user.module';
       inject: [ConfigService],
     }),
     UserModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService],

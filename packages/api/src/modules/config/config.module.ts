@@ -21,6 +21,7 @@ export class ConfigModule {
             NODE_ENV: Joi.string()
               .valid('development', 'production', 'test', 'provision')
               .default('development'),
+            API_BASE_URL: Joi.string().default('http://localhost:3000'),
             DATABASE_HOST: Joi.string().required(),
             DATABASE_TYPE: Joi.string().default('postgres'),
             DATABASE_SSL: Joi.boolean().default(false),
@@ -32,6 +33,12 @@ export class ConfigModule {
             USER_JWT_EXPIRES_IN: Joi.string().default('365d'),
             USER_BCRYPT_ROUNDS: Joi.number().default(10),
             USER_EMAIL_VERIFICATION_ENABLED: Joi.boolean().default(true),
+            MAIL_SMTP_HOST: Joi.string(),
+            MAIL_SMTP_PORT: Joi.number(),
+            MAIL_SMTP_SECURE: Joi.boolean(),
+            MAIL_SMTP_USERNAME: Joi.string(),
+            MAIL_SMTP_PASSWORD: Joi.string(),
+            MAIL_DEFAULT_FROM: Joi.string().default('from@gmail.com'),
           }),
         }),
       ],

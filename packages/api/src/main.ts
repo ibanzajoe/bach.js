@@ -10,8 +10,6 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 // enable @Transactional() decorator
 initializeTransactionalContext(); // Initialize cls-hooked
-// patchTypeORMRepositoryWithBaseRepository(); // patch Repository with BaseRepository.
-// patchTypeORMTreeRepositoryWithBaseTreeRepository();
 
 // prod mode
 if (import.meta.env.PROD) {
@@ -26,6 +24,7 @@ if (import.meta.env.PROD) {
   bootstrap();
 }
 
+// dev mode
 const viteNodeApp = await NestFactory.create(AppModule);
 await viteNodeApp.useGlobalPipes(new ValidationPipe());
 const config = new DocumentBuilder()
@@ -35,11 +34,9 @@ const config = new DocumentBuilder()
   .build();
 const document = SwaggerModule.createDocument(viteNodeApp, config);
 SwaggerModule.setup('docs', viteNodeApp, document);
-
 viteNodeApp.useGlobalPipes(
   new ValidationPipe({
     whitelist: true,
   }),
 );
-
 export const app = viteNodeApp;

@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Param, Patch, Post, Req } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Query,
+  Req,
+} from '@nestjs/common';
 import { ApiOperation } from '@nestjs/swagger';
 import { Paginate, Paginated, PaginateQuery } from 'nestjs-paginate';
 import { ConfigService } from '../config/config.service';
@@ -51,5 +60,11 @@ export class UserController {
   ) {
     dto.id = id;
     return this.userService.update(dto, request.user);
+  }
+
+  @Get('verify')
+  @ApiOperation({ summary: 'Verify email address' })
+  public async verifyEmail(@Query('token') token: string) {
+    return this.userService.verifyEmail(token);
   }
 }
