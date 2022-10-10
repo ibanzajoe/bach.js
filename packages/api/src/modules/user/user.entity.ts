@@ -1,5 +1,14 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {
@@ -12,7 +21,7 @@ export class User {
   public email: string;
 
   @ApiProperty()
-  @Column('text', { nullable: true })
+  @Column('text', { nullable: true, select: false })
   public password: string;
 
   @ApiPropertyOptional()
@@ -53,5 +62,15 @@ export class User {
 
   @ApiPropertyOptional()
   @Column('timestamp', { nullable: true })
-  public lastLoggedIn: Date;
+  public authenticated?: Date;
+
+  @DeleteDateColumn()
+  public deleted?: Date;
+
+  @UpdateDateColumn()
+  public updated?: Date;
+
+  @ApiProperty()
+  @CreateDateColumn()
+  public created: Date;
 }

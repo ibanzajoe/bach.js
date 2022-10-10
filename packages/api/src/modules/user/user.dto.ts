@@ -22,6 +22,14 @@ export class UserLoginDto {
   password: string;
 }
 
+export class UserLoginResponseDto {
+  @ApiProperty()
+  accessToken: string;
+
+  @ApiProperty()
+  expiresIn: string;
+}
+
 export class UserRegisterDto {
   @ApiProperty()
   @IsEmail()

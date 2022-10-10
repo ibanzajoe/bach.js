@@ -1,7 +1,12 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { ApiOperation, ApiQuery } from '@nestjs/swagger';
+import { Body, Controller, Get, Param, Patch, Post, Req } from '@nestjs/common';
+import { ApiOperation } from '@nestjs/swagger';
+import { Paginate, Paginated, PaginateQuery } from 'nestjs-paginate';
 import { ConfigService } from '../config/config.service';
-import { UserRegisterDto, UserLoginDto } from './user.dto';
+import {
+  UserLoginDto,
+  UserLoginResponseDto,
+  UserRegisterDto,
+} from './user.dto';
 import { User } from './user.entity';
 import { UserService } from './user.service';
 
@@ -12,9 +17,15 @@ export class UserController {
     private readonly userService: UserService,
   ) {}
 
+  // for all options https://github.com/ppetzold/nestjs-paginate
   @Get()
-  public async find() {
-    return this.userService.find();
+  @ApiOperation({
+    summary: 'Find users',
+    description:
+      'Example search options: http://localhost:3000/cats?limit=5&page=2&sortBy=color:DESC&search=i&filter.age=$gte:3',
+  })
+  public find(@Paginate() query: PaginateQuery): Promise<Paginated<User>> {
+    return this.userService.find(query);
   }
 
   @Post()
@@ -27,9 +38,18 @@ export class UserController {
   @ApiOperation({
     summary: 'Login a user and returns a user object with an accessToken',
   })
-  public async login(
-    @Body() dto: UserLoginDto,
-  ): Promise<User & { accessToken: string }> {
+  public async login(@Body() dto: UserLoginDto): Promise<UserLoginResponseDto> {
     return this.userService.login(dto);
+  }
+
+  @Patch(':id([0-9]+)')
+  @ApiOperation({ summary: 'Updates a user' })
+  public async update(
+    @Param('id') id: number,
+    @Body() dto: Partial<User>,
+    @Req() request,
+  ) {
+    dto.id = id;
+    return this.userService.update(dto, request.user);
   }
 }
