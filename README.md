@@ -1,4 +1,4 @@
-# Bach.js - an optimized full-stack framework
+# Bach.js - a fast, ready-to-go, full-stack framework
 
 I started this project mainly because I have yet to find a suitable starter framework built using the latest stack with Nest.js and Next.js. These frameworks are great but there are still a lot of boilerplating you need to do when you are building your next project idea. 
 
