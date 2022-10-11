@@ -17,7 +17,7 @@ Some other motivations behind this framework was to speed up Nest.js dev time us
 - User auth and role-based access control
 - REST API w/ pagination 
 - Folder structure, code samples and best practices
-- CI/CD ready using GCP
+- CI/CD ready using Github Actions
 
 ## 1. Getting started
 
