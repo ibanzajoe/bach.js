@@ -27,14 +27,14 @@ Before starting, make sure you have at least those components on your workstatio
 
 - Node v16+
 - Yarn 1.22+
-- Up-to-date installation of [Docker](https://www.docker.com/) may also be useful for advanced testing and image building, although it is not required for development.
+- Up-to-date installation of [Docker](https://www.docker.com/) is useful for setting up your local environment, but it is not required for development.
 
 ### 1.2 Project configuration
 
 Start by cloning this project on your workstation.
 
 ```sh
-git clone https://github.com/jaequery/bachjs
+git clone https://github.com/jaequery/bach.js
 ```
 
 The next thing will be to install all the dependencies of the project.
