@@ -141,4 +141,4 @@ The following improvements are currently in progress :
 
 ## 6. Contributing
 
-Feel free to suggest an improvement, report a bug, or ask something: [https://github.com/jaequery/bachjs/issues](https://github.com/jaequery/bachjs/issues)
+Feel free to suggest an improvement, report a bug, or ask something: [https://github.com/jaequery/bach.js/issues](https://github.com/jaequery/bach.js/issues)
