@@ -4,9 +4,6 @@ I started this project mainly because I have yet to find a suitable starter fram
 
 Some other motivations behind this framework was to speed up Nest.js dev time using Vite. I found the time it takes to hot-reload after each code change painful as the code base grew. Thankfully Vite was able to resolve these issues and putting this available for everyone to use.
 
-After several iterations of starting projects from scratch, I decided to put all the things I've learned and put it neatly into a single codebase. This is not a library, it is a collection of all the existing open-source tools that exist today. I hope you find this useful.
-
-
 “Ceaseless work...that is my secret.” - J.S. Bach
 
 <img src="https://d3fr1q02b1tb0i.cloudfront.net/wp-content/uploads/2017/11/06075602/Bach-bye-bye.jpg" width="300" />
